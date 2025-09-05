@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade {
+  animation: fade 1s ease-in-out;
+}
+@keyframes titlePop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.animate-title {
+  animation: titlePop 3s infinite ease-in-out;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 1s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slide-right 1s ease-out forwards;
+}
